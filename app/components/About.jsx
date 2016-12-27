@@ -1,6 +1,6 @@
 var React = require('react');
 
-var About = (props) =>{
+var About = (props) => {
   return (
     <div>
       <h3>About</h3>
@@ -8,6 +8,5 @@ var About = (props) =>{
     </div>
   )
 };
-
 
 module.exports = About;
