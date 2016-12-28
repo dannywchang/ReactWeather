@@ -33,13 +33,17 @@ var Weather = React.createClass({
       });
     });
   },
-  componenetDidMount: function(){
+  //when componet is mount to browser then execute this function
+  componentDidMount: function(){
+    //get location from query string
     var location = this.props.location.query.location;
-    if(location && location.length > 0) {
+    if (location && location.length > 0) {
       this.handleSearch(location);
+      //clear location when search temp success
       window.location.hash="#/";
     }
   },
+  //when component props updated
   componentWillReceiveProps:function(newProps){
     var location = newProps.location.query.location;
     if(location && location.length > 0) {

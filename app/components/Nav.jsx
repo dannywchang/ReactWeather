@@ -4,12 +4,14 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   onSearch: function (e) {
       e.preventDefault();
-
+      //get location from Nav component
       var location = this.refs.search.value;
+      // encode location
       var encodedLocation = encodeURIComponent(location);
-
+      //check the location is not null then replace the query string
       if (location.length > 0) {
         this.refs.search.value = '';
+        //update query parameter
         window.location.hash = '#/?location=' + encodedLocation;
       }
   },
